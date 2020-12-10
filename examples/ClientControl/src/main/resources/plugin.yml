@@ -1,0 +1,12 @@
+name: ClientControl
+version: @version@
+description: Example control players tool
+author: DiaLight
+depend: [ClientShield]
+
+main: dialight.clientshield.examples.ClientControl
+
+commands:
+  clientcontrol:
+    description: Control clients tool
+    aliases: [cc]

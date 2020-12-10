@@ -1,0 +1,10 @@
+name: AuthMeCookies
+version: @version@
+description: Example control clients tool
+author: DiaLight
+depend: [ClientShield]
+
+main: dialight.clientshield.examples.AuthMeCookies
+
+softdepend:
+  - AuthMe

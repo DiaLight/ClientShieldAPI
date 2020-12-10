@@ -1,0 +1,7 @@
+name: MiscExamples
+version: @version@
+description: Miscellaneous examples of clientShield usage
+author: DiaLight
+depend: [ClientShield]
+
+main: dialight.clientshield.examples.MiscExamples
