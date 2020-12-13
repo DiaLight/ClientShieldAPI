@@ -17,7 +17,7 @@ public class ClientShieldApi {
     public ClientShieldApi(Plugin plugin, ClientShieldImpl impl) {
         this.plugin = plugin;
         this.impl = impl;
-        instance = this;
+        this.instance = this;
     }
 
     public static List<Connection> getConnectedPlayers() {

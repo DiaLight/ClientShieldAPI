@@ -58,7 +58,8 @@ public class ClientControl extends JavaPlugin implements Listener {
             Map<ConfigKey, Object> config = builder.build();
             globalConfig.putAll(config);
             for (Connection con : ClientShieldApi.getConnectedPlayers()) {
-                con.updateConfig(config);
+                con.updateConfig(config)
+                        .exceptionally(con::printAndDisconnect);
             }
             return true;
         });

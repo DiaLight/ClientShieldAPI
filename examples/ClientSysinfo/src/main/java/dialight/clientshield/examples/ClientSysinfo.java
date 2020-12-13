@@ -66,7 +66,6 @@ public class ClientSysinfo extends JavaPlugin implements Listener {
 //                    JSON_GPUS: [{"deviseId":"0x1214","name":"Skylake GT2 [HD Graphics 510]","vendor":"Intel Corporation (0x8086)","versionInfo":"unknown","vram":268435456}]
 //                    JSON_DISKS: [{"name":"/dev/sda","model":"TOSHIBA-TR100","serial":"14EA523BKBSN","size":480103981056}]
 //                    JSON_NETWORKS: [{"name":"docker0","mac":"02:26:57:00:1f:02","display_name":"docker0"},{"name":"wlp3s0","mac":"00:26:57:00:1f:02","display_name":"wlp3s0"}]
-
 //                    JSON_DISPLAYS: [{"edid":"00FFFFFFFFFFFF0006AF2D200000000000160104901D117802BC05A2554C9A250E5054000000010101010101010101010101010101011D3680A070381E4030208E0025A5100000181D3680087238664030208E0025A510000018000000FE0041554F0A202020202020202020000000FE004231333348414E30322E30200A0043"}]
 //                    JSON_POWERS: [{"name":"BAT1","device_name":"AS23A4J","serial":"14351"},{"name":"hidpp_battery_0","device_name":"Wireless Mouse M560","serial":"412c-ba-cb-14-b6"}]
                 });

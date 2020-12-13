@@ -4,11 +4,8 @@ import org.apache.tools.ant.filters.ReplaceTokens
 plugins {
     java
 }
-repositories {
-    maven("https://repo.codemc.org/repository/maven-public/") { name = "codemc-repo" }
-}
+
 dependencies {
-    compileOnly("fr.xephi:authme:5.6.0-SNAPSHOT")
     compileOnly(parent!!.parent!!)
 }
 

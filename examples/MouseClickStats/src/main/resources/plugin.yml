@@ -1,0 +1,11 @@
+name: MouseClickStats
+version: @version@
+description: Example of collecting mouse click stats
+author: DiaLight
+depend: [ClientShield]
+
+main: dialight.clientshield.examples.MouseClickStats
+
+commands:
+  cps:
+    description: Get max CPS

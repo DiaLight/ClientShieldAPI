@@ -1,13 +1,10 @@
 package dialight.clientshield.examples;
 
-import dialight.clientshield.api.Connection;
-import dialight.clientshield.api.PauseLock;
-import dialight.clientshield.api.AsyncBakeProfileEvent;
-import dialight.clientshield.api.AsyncClientShieldConnectedEvent;
-import dialight.clientshield.api.AsyncLoginResumedEvent;
-import dialight.clientshield.api.AsyncNewLoginConnectionEvent;
+import dialight.clientshield.api.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.security.SecureRandom;
@@ -51,7 +48,7 @@ public class MiscExamples extends JavaPlugin implements Listener {
 //        e.getConnection().getName()
 //        e.disconnect("You fired")
 
-        // connecting screen will continue until you call pausedProtocol.resume()
+        // connecting screen will continue until you call pauseLock.unlock()
         PauseLock pauseLock = e.pauseLoginProtocol();
 
         Connection connection = e.getConnection();
@@ -102,6 +99,19 @@ public class MiscExamples extends JavaPlugin implements Listener {
     @EventHandler
     public void onLoginResume(AsyncLoginResumedEvent e) {  // warning: executes in netty thread
         // just for you know when the connection continue
+    }
+
+    @EventHandler
+    public void onLogin(PlayerLoginEvent e) {
+        Connection connection = ClientShieldApi.getConnection(e.getPlayer());
+        // assert connection == null;  // I'm sorry
+        // Can't connect ClientShield connection with player at the time by bukkit design(
+    }
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent e) {
+        Connection connection = ClientShieldApi.getConnection(e.getPlayer());
+        // here we go
     }
 
 }

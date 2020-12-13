@@ -1,0 +1,7 @@
+name: DarkNight
+version: @version@
+description: Example of dynamic manipulating of client gamma
+author: DiaLight
+depend: [ClientShield]
+
+main: dialight.clientshield.examples.DarkNight
